@@ -11,6 +11,7 @@ void Init_board(char board[ROW][COL],int row,int col)
 		}
 	}
 }
+
 void Display_board(char board[ROW][COL],int row,int col)
 {
 	int i=0;
@@ -111,6 +112,7 @@ char Win(char board[ROW][COL],int row,int col)
 	else
 		return 'C';
 }
+
 int Full(char board[ROW][COL],int row,int col)
 {
 	int i;
