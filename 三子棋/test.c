@@ -22,14 +22,14 @@ void game()
 		Display_board(board,ROW,COL);
 		ret=Win(board,ROW,COL);
 		if(ret!='C')
-		{
+		{//返回'C'继续下棋，否则停止下棋；跳出循环，判断结果
 			break;
 		}
 		ComputerMove(board,ROW,COL);
 		Display_board(board,ROW,COL);
 		ret=Win(board,ROW,COL);
 		if(ret!='C')
-		{
+		{//返回'C'继续下棋，否则停止下棋；跳出循环，判断结果
 			break;
 		}
 	}
@@ -52,7 +52,7 @@ void test()
 		switch(input)
 		{
 		case 1:
-			game();
+			game(); //进入游戏
 			break;
 		case 0:
 			printf("退出游戏\n");
