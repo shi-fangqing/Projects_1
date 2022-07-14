@@ -4,7 +4,7 @@ void Init_board(char board[ROW][COL],int row,int col)
 	int i=0;
 	int j=0;
 	for(i=0;i<row;i++)
-	{
+	{//初始化棋盘
 		for(j=0;j<col;j++)
 		{
 			board[i][j]=' ';
@@ -13,7 +13,7 @@ void Init_board(char board[ROW][COL],int row,int col)
 }
 
 void Display_board(char board[ROW][COL],int row,int col)
-{
+{//打印棋盘的方格，布局
 	int i=0;
 	int j=0;
 	for(i=0;i<row;i++)
@@ -56,8 +56,8 @@ void PlayerMove(char board[ROW][COL],int row,int col)
 	if(x>=1&&x<=row && y>=1&&y<=col)
 	{
 		if(board[x-1][y-1]==' ')
-		{
-			board[x-1][y-1]='*';
+		{//该位置为空时，填入玩家的棋子
+			board[x-1][y-1]='*'; 
 			break;
 		}
 		else
@@ -76,9 +76,9 @@ void ComputerMove(char board[ROW][COL],int row,int col)
 	while(1)
 	{
 		x=rand()%row;
-		y=rand()%col;
+		y=rand()%col;  //电脑随机生成出要下的位置
 		if(board[x][y]==' ')
-		{
+		{//该位置为空时，填入电脑的棋子
 			board[x][y]='#';
 			break;
 		}
